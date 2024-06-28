@@ -1,0 +1,5 @@
+- While opening file in main(), set some exclusive mode (prohibit writing by other apps)
+- Simplify Range::process_line() -- don't substract unsigned values:
+  throw out `if` & replace `pos <= line.length() - m_mask.length()` by `pos + m_mask.length() <= line.length()`
+- Open file in main thread, not in work threads, to properly handle opening errors
+- Add more more comments to make things clear clear
